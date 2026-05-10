@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# The first argument to detect is the build directory
+if [ -f "$1/buildpacks.toml" ]; then
+  echo "Monorepo Buildpack (Nushell)"
+  exit 0
+fi
+
+exit 1
