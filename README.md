@@ -23,8 +23,8 @@ uri = "https://github.com/heroku/heroku-buildpack-nodejs"
 root = "frontend/"
 
 # 2. Run custom logic (e.g., move files)
-[[buildpacks.group.inline]]
-script = "mkdir -p backend/static; cp -r frontend/dist/* backend/static/"
+[[buildpacks.group]]
+inline.script = "mkdir -p backend/static; cp -r frontend/dist/* backend/static/"
 
 # 3. Build the backend
 [[buildpacks.group]]
