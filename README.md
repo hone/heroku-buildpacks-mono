@@ -24,7 +24,7 @@ root = "frontend/"
 
 # 2. Run custom logic (e.g., move files)
 [[buildpacks.group]]
-inline.script = "mkdir -p backend/static; cp -r frontend/dist/* backend/static/"
+inline.script = "print '-----> Deploying assets...'; mkdir backend/static; cp -r frontend/dist/* backend/static/"
 
 # 3. Build the backend
 [[buildpacks.group]]
@@ -36,7 +36,7 @@ root = "backend/"
 Set this buildpack as your app's buildpack:
 
 ```bash
-heroku buildpacks:set https://github.com/heroku-buildpacks-mono -a your-app-name
+heroku buildpacks:set https://github.com/hone/heroku-buildpacks-mono -a your-app-name
 ```
 
 ## How it Works
