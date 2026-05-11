@@ -55,9 +55,10 @@ def main [build_dir: string, cache_dir: string, env_dir: string] {
                     CACHE_DIR: $cache_dir,
                     ENV_DIR: $env_dir
                 } {
-                    nu -c $script
+                    nu -c ($script + "; ignore")
                 }
             }
+
         }
 
     }
